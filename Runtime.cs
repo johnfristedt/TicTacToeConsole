@@ -29,16 +29,19 @@ namespace TicTacToe
             switch (input)
             {
                 case ConsoleKey.UpArrow:
-
+                    Board.Move(Board.MoveDirection.Up);
                     break;
                 case ConsoleKey.RightArrow:
-
+                    Board.Move(Board.MoveDirection.Right);
                     break;
                 case ConsoleKey.DownArrow:
-
+                    Board.Move(Board.MoveDirection.Down);
                     break;
                 case ConsoleKey.LeftArrow:
-
+                    Board.Move(Board.MoveDirection.Left);
+                    break;
+                case ConsoleKey.Enter:
+                    Board.PlaceMarker();
                     break;
             }
         }

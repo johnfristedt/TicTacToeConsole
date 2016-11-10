@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicTacToe.Interfaces
+namespace TicTacToe.Game
 {
-    interface ISellable
+    class GameUtils
     {
-        int Price { get; set; }
-        string ProductInformation { get; set; }
+        public static void WinCheck(Node[,] grid)
+        {
+
+        }
     }
 }
