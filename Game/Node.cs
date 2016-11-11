@@ -8,16 +8,15 @@ namespace TicTacToe.Game
 {
     class Node
     {
-        const bool DEBUG = true;
-
         public bool Taken { get; set; }
         public int Player { get; set; }
         public bool Selected { get; set; }
         public int Worth { get; set; }
+        public List<Node> Neighbours { get; set; }
 
         public void Render(bool p1Turn)
         {
-            if (!DEBUG && Selected)
+            if (Selected)
             {
                 if (p1Turn)
                 {
@@ -32,13 +31,17 @@ namespace TicTacToe.Game
 
             Console.Write(Taken ? (Player == 1 ? "[X]" : "[O]") : "[ ]");
 
-            if (DEBUG)
-            {
-
-            }
-
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;
+        }
+
+        private void WinCheck()
+        {
+            Task.Factory.StartNew(() =>
+            {
+
+                return 1;
+            });
         }
     }
 }

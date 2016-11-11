@@ -45,11 +45,22 @@ namespace TicTacToe.Game
 
                 Grid[row, col] = new Node { Taken = false, Player = 0, Selected = selected };
             });
+
+            LoopGrid((row, col) =>
+            {
+                foreach (var node in Grid)
+                {
+                    var neighbour = Grid[]
+                }
+
+                Grid[row, col].Neighbours.Add(null);
+            });
         }
 
         public void Render()
         {
             string board = "";
+
 
             LoopGrid((row, col) =>
             {
